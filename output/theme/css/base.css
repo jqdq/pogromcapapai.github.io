@@ -1,0 +1,36 @@
+.highlight {
+    font-family: 'Garamond', Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 
+* HEADER 
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (orientation: landscape) {
+    header {
+      flex-direction: row;
+    }
+  }
+  
+@media (orientation: portrait) {
+    header {
+      flex-direction: column;
+    }
+  }
+
+/* LOGO */
+
+body.home {
+    height: 100vh;
+    max-width: none;
+}
+
+:root:not([data-theme="light"]) img#logo {
+    filter: brightness(0) invert(1);
+}
