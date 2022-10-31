@@ -29,14 +29,14 @@ jobs:
     - uses: nelsonjchen/gh-pages-pelican-action@0.1.5
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        GH_PAGES_CNAME: ${{ steps.deployment.outputs.page_url }}
+        GH_PAGES_CNAME: 'jakdak.online'
         GH_PAGES_BRANCH: gh-pages
 
   deploy:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: 'jakdak.online'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
