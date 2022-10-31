@@ -29,5 +29,3 @@ jobs:
     - uses: nelsonjchen/gh-pages-pelican-action@0.1.5
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        GH_PAGES_CNAME: https://jakdak.online
-        GH_PAGES_BRANCH: gh-pages

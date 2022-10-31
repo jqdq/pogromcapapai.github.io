@@ -17,5 +17,5 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
 
-STATIC_PATHS = ['images', 'magics/CNAME']
+STATIC_PATHS = ['images', 'magics']
 EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'},}
