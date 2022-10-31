@@ -35,6 +35,10 @@ header>a {
   body>header {
     flex-direction: column;
   }
+
+  img#logo {
+    scale: 100;
+  }
 }
 
 /* LOGO */

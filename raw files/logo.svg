@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
    sodipodi:docname="logo.svg"
+   inkscape:export-filename="../theme/static/images/logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +28,8 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.6691276"
-     inkscape:cx="148.58061"
-     inkscape:cy="179.43505"
+     inkscape:cx="23.665057"
+     inkscape:cy="180.03417"
      inkscape:window-width="1512"
      inkscape:window-height="945"
      inkscape:window-x="0"
@@ -41,7 +44,7 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab Semi-Bold';text-align:center;letter-spacing:4px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:37.1566;fill:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab Semi-Bold';text-align:center;letter-spacing:4px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:37.1566;display:inline;fill:#000000"
        x="118.26875"
        y="124.61599"
        id="text113" />
