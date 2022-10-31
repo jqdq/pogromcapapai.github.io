@@ -55,7 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet"> 
 </head>
 
-<body id="index" class="home">
+<body id="index" class="{% block body_class %}{% endblock %}">
   <header role="nav" aria-label="Subpage categories">
     <img srcset="{{ SITEURL }}/theme/images/logo.svg" alt="jakdak.online logo" id="logo">
     <a href="" data-tooltip="Projects" aria-label="Apps" id="apps">apps</a>

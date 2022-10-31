@@ -1,8 +1,8 @@
 AUTHOR = 'Jakub Dakowski'
-SITENAME = 'jakdak online'
+SITENAME = 'jakdak.online'
 SITEURL = 'https://jakdak.online'
 
-PATH = 'content'
+TYPOGRIFY = False
 
 TIMEZONE = 'Europe/Warsaw'
 
@@ -16,14 +16,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+# LINKS = (('Pelican', 'https://getpelican.com/'),
+#          ('Python.org', 'https://www.python.org/'),
+#          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+#          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# SOCIAL = (('You can add links in your config file', '#'),
+#           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -31,3 +31,12 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME = "theme"
+
+# Render settings
+PATH = 'content'
+DEFAULT_CATEGORY = 'misc'
+PAGE_PATHS = ['../pages']
+
+USE_FOLDER_AS_CATEGORY = True
+DELETE_OUTPUT_DIRECTORY = True
+DEFAULT_DATE='fs'
