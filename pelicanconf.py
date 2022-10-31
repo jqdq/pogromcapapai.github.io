@@ -35,7 +35,7 @@ THEME = "theme"
 # Render settings
 PATH = 'content'
 DEFAULT_CATEGORY = 'misc'
-PAGE_PATHS = ['../pages']
+PAGE_PATHS = ['pages']
 
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
