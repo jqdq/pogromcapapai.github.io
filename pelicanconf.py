@@ -1,8 +1,8 @@
 AUTHOR = 'Jakub Dakowski'
 SITENAME = 'jakdak.online'
-SITEURL = 'https://jakdak.online'
+SITEURL = '127.0.0.1'
 
-TYPOGRIFY = False
+TYPOGRIFY = True
 
 TIMEZONE = 'Europe/Warsaw'
 
