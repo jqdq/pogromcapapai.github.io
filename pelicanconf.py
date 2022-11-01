@@ -3,6 +3,7 @@ SITENAME = 'jakdak.online'
 SITEURL = '127.0.0.1'
 
 TYPOGRIFY = True
+PLUGINS = ['webassets']
 
 TIMEZONE = 'Europe/Warsaw'
 
