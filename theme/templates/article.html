@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "components/base.html" %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
 
 {% block title %}{{ SITENAME }} - {{ article.title|striptags  }}{% endblock %}
@@ -41,9 +41,10 @@
     {% endif %}
     {% if article.authors %}
     <address class="vcard author">
-      By {% for author in article.authors %}
+      by jakdak
+      <!-- By {% for author in article.authors %}
           <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
+        {% endfor %} -->
     </address>
     {% endif %}
     {% if article.category %}

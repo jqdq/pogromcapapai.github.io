@@ -58,46 +58,12 @@
 </head>
 
 <body id="index" class="{% block body_class %}{% endblock %}">
-  <header role="nav" aria-label="Subpage categories">
-    <img srcset="{{ SITEURL }}/theme/images/logo.svg" alt="jakdak.online logo" id="logo">
-    <a href="" data-tooltip="Projects" aria-label="Apps" id="apps">apps</a>
-    <a href="" data-tooltip="Longer texts" aria-label="Papers" id="papers">papers</a>
-    <a href="" data-tooltip="The rest" aria-label="Stuff" id="stuff">stuff</a>
-    <a href="" aria-label="Contact" data-tooltip="Find & contact me!" id="contact">jakdak</a>
-  </header>
+  {% include 'components/header.html' %}
   <main class="container">
-
     {% block content %}
     {% endblock %}
   </main>
-  <footer id="contentinfo" class="container">
-    <div class="grid">
-      <article>
-        <header>Contact</header>
-        <address>
-          <p>Jakub Dakowski</p>
-          <p><a href="https://github.com/PogromcaPapai">PogromcaPapai</a> on GitHub</p>
-          <p><a href="mailto:">E-mail will be here</a></p>
-        </address>
-      </article>
-      <article id="assets">
-        <header>Assets</header>
-        <p>
-          Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a
-            href="https://www.python.org/">Python</a>.
-        </p>
-        <p>
-          Made using <a href="http://picocss.com/">pico.css</a> with custom CSS code.
-        </p>
-        <p>
-          Hosted on Github Pages &lt;3
-        </p>
-
-      </article>
-    </div>
-    <center>Copyright &copy; <span id="date">2022</span>, Jakub Dakowski.</center>
-    <script>document.getElementById('date').textContent = new Date().getFullYear()</script>
-  </footer>
+  {% include 'components/footer.html' %}
 </body>
 
 </html>
