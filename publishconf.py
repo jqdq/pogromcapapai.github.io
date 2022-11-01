@@ -18,4 +18,4 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 #GOOGLE_ANALYTICS = ""
 
 STATIC_PATHS = ['images', 'magics']
-EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}, 'magics/favicon.png': {'path': 'favicon.png'}}
+EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}, 'magics/favicon.ico': {'path': 'favicon.ico'}}
