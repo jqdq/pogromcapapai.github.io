@@ -5,6 +5,7 @@ import os
 import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
+from run_before_deploy import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = 'https://jakdak.online'
@@ -18,4 +19,8 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 #GOOGLE_ANALYTICS = ""
 
 STATIC_PATHS = ['images', 'magics']
-EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}, 'magics/favicon.ico': {'path': 'favicon.ico'}}
+EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}} | {f"magics/{i}":{"path":i} for i in FAVI_NAMES}
+
+JINJA_GLOBALS = {
+    'FAVI_HTML':FAVI_HTML
+}

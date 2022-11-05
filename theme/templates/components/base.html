@@ -45,8 +45,7 @@
   {% endif %}
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-  {% assets filters="libsass,cssmin", output="css/style.min.css", "css/*" %}
+  {% assets filters="libsass,cssmin", output="css/style.min.css", "css/base.sass" %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
   {% endassets %}
   {% endblock head %}
@@ -55,6 +54,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  {{ FAVI_HTML }}
 </head>
 
 <body id="index" class="{% block body_class %}{% endblock %}">
