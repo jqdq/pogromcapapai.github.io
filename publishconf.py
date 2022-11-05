@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 #GOOGLE_ANALYTICS = ""
 
 STATIC_PATHS = ['images', 'magics']
-EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}} | {f"magics/{i}":{"path":i} for i in FAVI_NAMES}
+EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}}.update({f"magics/{i}":{"path":i} for i in FAVI_NAMES})
 
 JINJA_GLOBALS = {
     'FAVI_HTML':FAVI_HTML
