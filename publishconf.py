@@ -18,8 +18,11 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
 
-STATIC_PATHS = ['images', 'magics']
-EXTRA_PATH_METADATA = {'magics/CNAME': {'path': 'CNAME'}}.update({f"magics/{i}":{"path":i} for i in FAVI_NAMES})
+STATIC_PATHS = ['magics']
+# STATIC_PATHS = ['images', 'magics']
+_d1 = {f"magics/{i}":{"path":i} for i in FAVI_NAMES}
+_d2 = {'magics/CNAME': {'path': 'CNAME'}}
+EXTRA_PATH_METADATA = {**_d1, **_d2}
 
 JINJA_GLOBALS = {
     'FAVI_HTML':FAVI_HTML
