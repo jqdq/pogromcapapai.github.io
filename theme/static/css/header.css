@@ -2,28 +2,26 @@
     font-family: 'Garamond', Georgia, 'Times New Roman', Times, serif;
 } */
 
-.big-page header {
+header#main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.big-page header {
   flex-grow: 1;
 }
 
-header>element{
+header#main>element{
   margin: auto;
-}
-
-/* HEADER LINKS */
-
-header>a {
   font-size: xx-large;
 }
 
 /* RESPONSIVENESS */
 
 @media (orientation: landscape) {
-  .home header {
+  header#main {
     flex-direction: row;
   }
   img#logo {
@@ -35,7 +33,7 @@ header>a {
 }
 
 @media (orientation: portrait) {
-  .home header {
+  header#main {
     flex-direction: column;
   }
   img#logo {
@@ -45,12 +43,12 @@ header>a {
 
 /* LOGO */
 
-.home > .big-page {
+.big-page {
   height: 100vh;
   max-width: none;
   background-origin: padding-box;
-  background: var(--primary-focus);
-  background: linear-gradient(0deg, var(--background-color) -10%, var(--primary-focus) 20%, var(--primary-focus) 100%); 
+  background: var(--muted-border-color);
+  background: linear-gradient(0deg, var(--background-color) -10%, var(--muted-border-color) 20%, var(--muted-border-color) 100%); 
   align-items: center;
   justify-content: center;
   display: flex;
@@ -75,5 +73,9 @@ header>a {
 
   #blog-arrow img {
     filter: brightness(0) invert(1);
+  }
+  .big-page {
+    background: var(--primary-focus);
+    background: linear-gradient(0deg, var(--background-color) -10%, var(--primary-focus) 20%, var(--primary-focus) 100%); 
   }
 }

@@ -9,13 +9,23 @@ header a, header
 .entry-title
     margin-bottom: 0%
 
-.vcard.author
-    margin-bottom: 0%
-
+.inline
+    display: inline
 
 // Import Pico
 @import "@picocss/pico@1.5.6/scss/pico.scss"
 @import "header.css"
 
+h1, h2, h3, h4
+    font-family: 'Roboto Slab', serif
 
-body
+.short-post-info
+    margin-bottom: 0%
+    font-family: 'Roboto Slab', serif
+    color: var(--h1-color) !important
+
+address
+    color: var(--h1-color) !important
+
+details[open] .date
+    visibility: hidden

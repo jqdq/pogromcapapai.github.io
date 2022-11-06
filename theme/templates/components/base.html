@@ -46,7 +46,7 @@
   {% endif %}
 
   <!-- Stylesheets -->
-  {% assets filters="libsass,cssmin", output="css/style.min.css", "css/base.sass" %}
+  {% assets filters="libsass,cssmin", output="css/style.min.css", "css/base.sass", "css/header.css" %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
   {% endassets %}
   {% endblock head %}
@@ -60,13 +60,9 @@
   {{ FAVI_HTML }}
 </head>
 
-<body id="index" class="{% block body_class %}{% endblock %}">
-  {% include 'components/header.html' %}
-  <main class="container">
-    {% block content %}
-    {% endblock %}
-  </main>
-  {% include 'components/footer.html' %}
+<body>
+  {% block content %}
+  {% endblock %}
 </body>
 
 </html>

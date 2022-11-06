@@ -1,16 +1,13 @@
-{% extends "components/base.html" %}
-{% block content %}
-{% include 'components/header-hero.html' %}
-<main class="container">
+{% extends "components/empty.html" %}
+{% block page %}
     <section id="content">
+        {% block content_title %}{% endblock %}
         {% for article in articles_page.object_list %}
         <article class="hentry">
             <header>
                 <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                <div class="short-post-info">
-                    by <address class="inline">jakdak</address>
-                </div>
+                <div class="short-post-info">by <address class="inline"> jakdak </address></div>
             </header>
             <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
         </article>
@@ -20,5 +17,4 @@
         {% endif %}
     </section><!-- /#content -->
 </main>
-{% include 'components/footer.html' %}
-{% endblock content %}
+{% endblock page %}

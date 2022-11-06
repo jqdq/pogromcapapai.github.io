@@ -1,10 +1,9 @@
-{% extends "components/base.html" %}
+{% extends "components/empty.html" %}
 
-{% block title %}{{ SITENAME }} - Authors{% endblock %}
+{% block title %}{{ SITENAME }} - autorzy{% endblock %}
 
-{% block content %}
-    <h1>Authors on {{ SITENAME }}</h1>
-    <ul>
+{% block page %}
+    <h1>Na {{ SITENAME }} piszą:</h1>
     {% for author, articles in authors|sort %}
         <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
     {% endfor %}

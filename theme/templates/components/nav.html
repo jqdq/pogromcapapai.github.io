@@ -1,0 +1,9 @@
+<aside>
+    <nav>
+        <ul>
+        {% for category, articles in categories|sort %}
+            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+        {% endfor %}
+        </ul>
+    </nav>
+</aside>
