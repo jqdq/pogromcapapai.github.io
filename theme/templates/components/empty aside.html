@@ -1,0 +1,14 @@
+{% extends "components/base.html" %}
+{% block content %}
+{% include 'components/header.html' %}
+<main class="container">
+    <div class="grid">
+    {% include 'components/aside.html' %}
+    <section id="content" aria-label="Content">
+        {% block page %}
+        {% endblock page %}
+    </section>
+    </div>
+</main>
+{% include 'components/footer.html' %}
+{% endblock content %}

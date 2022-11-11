@@ -1,24 +1,28 @@
 {% extends "components/base.html" %}
+<!-- {% block body_class %}scroller{% endblock %} -->
 {% block content %}
 {% include 'components/header-hero.html' %}
 <main class="container">
-    <section id="content">
-        {% for article in articles_page.object_list %}
-        <article class="hentry">
-            <header>
-                <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                        title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                <div class="short-post-info">
-                    by <address class="inline">jakdak</address>
-                </div>
-            </header>
-            <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-        </article>
-        {% endfor %}
-        {% if articles_page.has_other_pages() %}
-        {% include 'pagination.html' %}
-        {% endif %}
-    </section><!-- /#content -->
+    <div class="grid">
+        {% include 'components/aside.html' %}
+        <section id="content">
+            {% for article in articles_page.object_list %}
+            <article class="hentry">
+                <header>
+                    <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+                    <div class="short-post-info">
+                        by <address class="inline">jakdak</address>
+                    </div>
+                </header>
+                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+            </article>
+            {% endfor %}
+            {% if articles_page.has_other_pages() %}
+            {% include 'pagination.html' %}
+            {% endif %}
+        </section><!-- /#content -->
+    </div>
 </main>
 {% include 'components/footer.html' %}
 {% endblock content %}

@@ -1,8 +1,8 @@
 // Override default variables
-$grey-hue: 259 !default;
-$primary-hue: 292 !default;
+$grey-hue: 259 !default
+$primary-hue: 292 !default
 
-header a, header
+header a, header, aside nav *
     font-family: 'Roboto Slab', serif
     color: var(--h1-color)
 
@@ -29,3 +29,43 @@ address
 
 details[open] .date
     visibility: hidden
+
+@media (min-width: 992px) 
+  main .grid 
+    grid-column-gap: var(--spacing-company)
+    grid-template-columns: auto 80%
+
+main.container
+    padding-bottom: 0em !important
+
+aside nav
+    position: sticky
+    top: 10%
+    text-transform: uppercase
+    text-align: center
+    margin-right: 2.5em
+
+
+aside nav a:is([aria-current], :hover, :active, :focus), [role="link"]:is([aria-current], :hover, :active, :focus) 
+  text-decoration: underline
+
+article, aside nav
+    margin-top: 3em
+    margin-bottom: 3em
+
+#categories_aside
+    margin-bottom: 1.5em
+    margin-top: 1.5em
+
+#categories_aside *
+    margin-bottom: 0.6em
+    margin-top: 0.6em
+
+#content
+    margin-bottom: 0em
+
+// .scroller
+//     scroll-snap-type: y proximity
+
+// .scroller *
+//   scroll-snap-align: start;

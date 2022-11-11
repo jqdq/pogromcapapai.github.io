@@ -1,20 +1,17 @@
-{% extends "components/empty.html" %}
+{% extends "components/empty aside.html" %}
 {% block page %}
-    <section id="content">
-        {% block content_title %}{% endblock %}
-        {% for article in articles_page.object_list %}
-        <article class="hentry">
-            <header>
-                <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                        title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                <div class="short-post-info">by <address class="inline"> jakdak </address></div>
-            </header>
-            <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-        </article>
-        {% endfor %}
-        {% if articles_page.has_other_pages() %}
-        {% include 'pagination.html' %}
-        {% endif %}
-    </section><!-- /#content -->
-</main>
+    {% block content_title %}{% endblock %}
+    {% for article in articles_page.object_list %}
+    <article class="hentry">
+        <header>
+            <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                    title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+            <div class="short-post-info">by <address class="inline"> jakdak </address></div>
+        </header>
+        <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+    </article>
+    {% endfor %}
+    {% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+    {% endif %}
 {% endblock page %}
