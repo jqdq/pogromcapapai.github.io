@@ -2,7 +2,7 @@
 $grey-hue: 259 !default
 $primary-hue: 292 !default
 
-header a, header, aside nav *
+header a, header, .category *
     font-family: 'Roboto Slab', serif
     color: var(--h1-color)
 
@@ -30,13 +30,21 @@ address
 details[open] .date
     visibility: hidden
 
-@media (min-width: 992px) 
-  main .grid 
-    grid-column-gap: var(--spacing-company)
-    grid-template-columns: auto 80%
+@media (min-width: 992px)
+    main .grid
+        grid-column-gap: var(--spacing-company)
+        grid-template-columns: auto 80%
+    
+    nav.mobile
+        display: none
+
+@media (max-width: 992px)
+    aside
+        display: none
 
 main.container
     padding-bottom: 0em !important
+
 
 aside nav
     position: sticky
@@ -45,9 +53,8 @@ aside nav
     text-align: center
     margin-right: 2.5em
 
-
-aside nav a:is([aria-current], :hover, :active, :focus), [role="link"]:is([aria-current], :hover, :active, :focus) 
-  text-decoration: underline
+.category a:is([aria-current], :hover, :active, :focus), [role="link"]:is([aria-current], :hover, :active, :focus)
+    text-decoration: underline
 
 article, aside nav
     margin-top: 3em
@@ -69,3 +76,13 @@ article, aside nav
 
 // .scroller *
 //   scroll-snap-align: start;
+
+#navlogo
+    max-width: 20vw
+
+nav.mobile
+    margin-top: -2em
+
+#mobile-cats
+    margin-top: auto
+    margin-bottom: auto

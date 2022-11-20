@@ -1,9 +1,32 @@
+<nav aria-hidden="true" class="mobile">
+    <ul>
+      <li>
+        <a href="{{ SITEURL }}">
+            <img srcset="{{ SITEURL }}/images/logo.svg" alt="Bo back to homepage" id="navlogo">
+        </a>
+      </li>
+    </ul>
+    <details role="list" class="category" dir="rtl" id="mobile-cats">
+        <summary aria-haspopup="listbox">blog</summary>
+        <ul role="listbox">
+        <li>
+            <a href="{{ SITEURL }}/blog.html">root</a>
+        </li>
+        {% for category, articles in categories|sort %}
+            <li>
+                <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </details>
+
+</nav>
 <aside>
     <nav aria-label="Blog navigation">
         <a href="{{ SITEURL }}">
             <img srcset="{{ SITEURL }}/images/logo.svg" alt="Bo back to homepage" id="logo">
         </a>
-        <div id="categories_aside" aria-label="Blog post categories">
+        <div id="categories_aside" class="category" aria-label="Blog post categories">
             {% for category, articles in categories|sort %}
                 <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
             {% endfor %}

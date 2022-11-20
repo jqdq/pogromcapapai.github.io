@@ -1,5 +1,10 @@
+import sys
+import os
+sys.path.append(os.curdir)
+from run_before_deploy import *
+
 AUTHOR = 'Jakub Dakowski'
-SITENAME = 'jakdak.online'
+SITENAME = '[test] jakdak.online'
 SITEURL = '127.0.0.1'
 
 TYPOGRIFY = True
@@ -41,3 +46,18 @@ PAGE_PATHS = ['pages']
 USE_FOLDER_AS_CATEGORY = True
 DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_DATE='fs'
+
+INDEX_SAVE_AS = 'blog.html'
+
+TEMPLATE_PAGES = {
+    'pages/landing.html':'index.html'
+}
+
+STATIC_PATHS = ['images', 'magics']
+_d1 = {f"magics/{i}":{"path":i} for i in FAVI_NAMES}
+_d2 = {'magics/CNAME': {'path': 'CNAME'}}
+EXTRA_PATH_METADATA = {**_d1, **_d2}
+
+JINJA_GLOBALS = {
+    'FAVI_HTML':FAVI_HTML
+}
